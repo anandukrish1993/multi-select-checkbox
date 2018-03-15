@@ -1,0 +1,46 @@
+.main-container{
+    font-family: proxima-nova-soft,sans-serif;
+}
+.header-section{
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+}
+.row-section{
+    display: inline-block;
+    width: 23%;
+}
+.row-section input{
+    height: 25px;
+    padding-left: 5px;
+}
+.submit-button-section{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0px;
+    margin-top: 20px;
+}
+.submit-button-section .submit{
+    text-transform: uppercase;
+    border-radius: 5px;
+    height: 40px;
+    background: #3fbfe1;
+    color: #fff;
+}
+.submit-button-section .cancel{
+    text-transform: uppercase;
+    border-radius: 5px;
+    height: 40px;
+    background: #b1b1b1;
+    color: #fff;
+}
+.table-container table{
+    width: 100%;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+.table-container table th, .table-container table td{
+    padding: 5px;
+    border: 1px solid;
+}
