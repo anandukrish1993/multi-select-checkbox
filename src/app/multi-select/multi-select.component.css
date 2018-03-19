@@ -1,0 +1,48 @@
+.multi-select-container{
+    display: inline-block;
+}
+.body-container{
+    position: absolute;
+    margin-top: 10px;
+}
+.list-container{
+    max-height: 250px;
+    overflow-y: scroll;
+    background: bisque;
+}
+.list-container ul{
+    list-style: none;
+    padding: 0;
+}
+.list-container ul li{
+    padding: 5px;
+}
+.list-container ul li label:hover{
+    cursor: pointer;
+}
+.list-container ul li label{
+    background: url('../../assets/img/ic-checkbox.png') left center no-repeat;
+    padding-left: 25px;
+    padding-bottom: 3px;
+}
+.list-container ul li label.checked{
+    background: url('../../assets/img/ic-checkbox-checked.png') left center no-repeat;  
+}
+.multi-select-container .input-container{
+    height: 25px;
+}
+.multi-select-container .input-container .display-data{
+    display: inline-block;
+    height: 25px;
+    width: 150px;
+    border: 1px solid #b1b1b1;
+}
+.button-container{
+    width: 100%;
+}
+.button-container .cancel{
+    float: left;
+}
+.button-container .submit{
+    float: right;
+}

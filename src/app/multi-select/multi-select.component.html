@@ -1,0 +1,20 @@
+<div class="multi-select-container">
+  <div class="input-container" (click)="showPositionList()">
+    <div class="display-data">
+      <span *ngFor="let position of selectedPositions">{{position.name}}</span>
+    </div>
+  </div>
+  <div *ngIf="showList" class="body-container">
+    <div class="list-container">
+      <ul>
+        <li *ngFor="let position of positionList;let i=index">
+          <label [ngClass]="{'checked':position.checked}" (click)="checkPosition(i)">{{position.name}}</label>
+        </li>
+      </ul>
+    </div>
+    <div class="button-container">
+      <button class="cancel" (click)="clearClick()">Clear</button>
+      <button class="submit" (click)="doneClick()">Done</button>
+    </div>
+  </div>
+</div>
