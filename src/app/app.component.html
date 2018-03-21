@@ -14,7 +14,7 @@
     </div>
     <div class="row-section">
       <label>Fileding Position</label>
-      <app-multi-select [positionList]="fieldPositions"></app-multi-select>
+      <app-multi-select [positionList]="fieldPositions" [change]="fieldPositionSelected"></app-multi-select>
     </div>
   </div>
   <div class="submit-button-section">
@@ -35,7 +35,7 @@
           <td>{{row.name}}</td>
           <td>{{row.nationality}}</td>
           <td>{{row.Franchise}}</td>
-          <td>{{row.position}}</td>
+          <td>{{row.positionNames}}</td>
         </tr>
       </tbody>
     </table>

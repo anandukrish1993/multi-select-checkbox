@@ -9,6 +9,8 @@ import { FieldingPosition } from '../fieldingPosition';
 export class MultiSelectComponent implements OnInit {
 
   @Input() positionList: FieldingPosition[];
+  @Input() change: Function;
+  model: number[];
   showList: boolean = false;
   selectedPositions: FieldingPosition[] = [];
 
@@ -20,13 +22,18 @@ export class MultiSelectComponent implements OnInit {
     this.showList = true;
   }
   clearClick(): void {
-    for(var i=0;i<this.positionList.length;i++){
+    for (var i = 0; i < this.positionList.length; i++) {
       this.positionList[i].checked = false;
     }
     this.selectedPositions = [];
   }
   doneClick(): void {
     this.showList = false;
+    this.model = [];
+    for (var i = 0; i < this.selectedPositions.length; i++) {
+      this.model.push(this.selectedPositions[i].key);
+    }
+    this.change(this.model);
   }
   checkPosition(index): void {
     this.positionList[index].checked = !this.positionList[index].checked;
